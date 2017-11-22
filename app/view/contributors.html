@@ -1,0 +1,30 @@
+<div class="container-fluid">
+	<div class="row">
+			<div class="col-12">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">Home</li>
+					<li class="breadcrumb-item">Repositórios</li>
+					<li class="breadcrumb-item active">Contributors</li>
+					<li class="hidden-xs pull-right"><i class="fa fa-eye" aria-hidden="true"></i></i> View on GitHub</a><li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	<hr>
+
+	<div class="container-fluid">
+	  <h3>Project Contributors ({{contributors.length}})</h3>
+	  <ul class="contributors">
+	      <li class="contributor" ng-repeat="contrib in contributors">
+	        <a
+	          class="avatar"
+	          ng-href="#/github/{{contrib.login}}/"
+	          title="{{contributionsTitle(contrib)}}">
+	            <img alt="{{contrib.login}}'s avatar" ng-src="{{contrib.avatar_url}}"/>
+	            <span class="name">{{contrib.login}}</span>
+	            <span class="contributions">{{contrib.contributions}}</span>
+	        </a>
+	      </li>
+	  </ul>
+	</div>
+</div>

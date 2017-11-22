@@ -1,0 +1,19 @@
+<div class="container">
+	<h3>{{app}}</h3>
+	<input type="text" ng-model="criterioDeBusca" placeholder="Search the repository" class="form-control"><br>
+	<table class="table ">
+		<tr>
+			<th>Nome</th>
+			<th>Linguagem</th>
+			<th>Watchers</th>
+			<th>Forks</th>
+			<th>Stars</th>
+		</tr>
+		<tr ng-repeat="repos in repositorios | filter:{name:criterioDeBusca}">
+			<td><a href="#!/contributors/{{repos.name}}"><i class="fa fa-database"> {{repos.name}}</a></td>
+			<td>{{repos.language}}</td>
+			<td>{{repos.watchers}}</td>
+			<td>{{repos.forks}}</td>
+			<td>{{repos.stargazers_count}}</td>
+		</tr>
+</div>
