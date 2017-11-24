@@ -2,3 +2,17 @@ nav{
 
 	margin-top: -10px;
 }
+
+.logo{
+	max-width: 200px;
+	width: auto;
+	height: auto;
+}
+
+.contributors .avatar img{
+	display: block;
+    width: 75px;
+    height: 75px;
+    border: 0;
+    border-radius: 3px;
+}
