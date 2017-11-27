@@ -1,6 +1,7 @@
 angular.module("MundiPaggRepos").controller('MundiPaggReposCtrl', function($scope, $http){
 	$scope.app = "MundiPagg Repos"
 	$scope.repositorios = [];
+	$scope.users = [];
 
 	var carregarNomes = function(){
 		$http({
@@ -10,5 +11,15 @@ angular.module("MundiPaggRepos").controller('MundiPaggReposCtrl', function($scop
 			$scope.repositorios = response.data;
 		})
 	}
+
+	var carregarUsers = function(){
+		$http({
+			method: 'GET',
+			url: 'https://api.github.com/users/mundipagg'})
+			.then(function(response){
+				$scope.users = response.data;
+			})
+	}
 	carregarNomes();
+	carregarUsers();
 });
