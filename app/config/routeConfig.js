@@ -1,7 +1,8 @@
 angular.module("MundiPaggRepos").config(function($routeProvider){
 	
 	$routeProvider.when("/",{
-		templateUrl: "view/home.html"
+		templateUrl: "view/home.html",
+		controller: "homeCtrl"
 	});
 
 	$routeProvider.when("/github-info", {
@@ -11,7 +12,6 @@ angular.module("MundiPaggRepos").config(function($routeProvider){
 
 	$routeProvider.when("/contributors/:name",{
 		templateUrl: "view/contributors.html",
-		controller: "contributorsCtrl"
+		controller: "contributorsCtrl",
 	});
-
 })

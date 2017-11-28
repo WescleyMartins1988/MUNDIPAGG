@@ -11,20 +11,13 @@
 			</div>
 		</div>
 	<hr>
-
-	<div class="container-fluid">
-	  <h3>Project Contributors ({{contributors.length}})</h3>
-	  <ul class="contributors">
-	      <li class="contributor" ng-repeat="contrib in contributors">
-	        <a
-	          class="avatar"
-	          ng-href="#/github/{{contrib.login}}/"
-	          title="{{contributionsTitle(contrib)}}">
-	            <img alt="{{contrib.login}}'s avatar" ng-src="{{contrib.avatar_url}}"/>
-	            <span class="name">{{contrib.login}}</span>
-	            <span class="contributions">{{contrib.contributions}}</span>
-	        </a>
-	      </li>
-	  </ul>
+	
+	<div class="container">
+		<h3>Project Contributors ({{contributors.length}})</h3>
+		<div class="card page-contributors" ng-repeat="contrib in contributors">
+			<img src="{{contrib.avatar_url}}" class="card-img">
+			<div class="card-img-overlay">
+			</div>
+		</div>
 	</div>
 </div>

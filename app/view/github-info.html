@@ -15,11 +15,11 @@
 			<div class="col-6">
 				<span class="avatar avatar_user">
 					<img src="{{users.avatar_url}}" style="width: 80px;">
-					<h4>{{users.login}}</h4>
+					<h4><i class="fa fa-database"></i> {{users.login}}</h4>
 				</span>
 			</div>
 			<div class="col-6">
-				<div class="card pull-right" style="background-color: #e9ecef;">
+				<div class="card pull-right card-length" style="background-color: #e9ecef;">
 					<div class="card-body">
 						<h4 class="card-title" style="text-align: center;">{{repositorios.length}}</h4>
 						<h6 class="card-subtitle text-muted" style="font-size: 13px; text-align: center;">Repositórios Públicos.</h6>
@@ -45,7 +45,7 @@
 					<th><i class="fa fa-star" aria-hidden="true"></i> Stars</th>
 				</tr>
 				<tr ng-repeat="repos in repositorios | filter:{name:criterioDeBusca}">
-					<td><a href="#!/contributors/{{repos.name}}"><button type="button" class="btn btn-xs btn-default m-l-md reposName" name="{{repos.name}}"><i class="fa fa-database"></i> {{repos.name | titleFilter}}
+					<td><a href="#!/contributors/{{repos.name}}"><button type="button" class="btn btn-xs btn-default m-l-md reposName" name="{{repos.name}}"><i class="fa fa-database"></i> {{repos.name | titleFilter | lowercase}}
 					</button></a></td>
 					<td class="information">{{repos.language}}</td>
 					<td class="information">{{repos.watchers}}</td>
