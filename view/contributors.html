@@ -1,0 +1,38 @@
+<div class="container-fluid">
+	<div class="row">
+			<div class="col-12">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#!/">Home</a></li>
+					<li class="breadcrumb-item"><a href="#!/github-info">{{info.owner.login}}</a></li>
+					<li class="breadcrumb-item active">{{info.name}}</li>
+					<li class="hidden-xs pull-right"><a href="https://github.com/{{info.owner.login}}/{{info.name}}/graphs/contributors"><i class="fa fa-eye" aria-hidden="true"></i></i> View on GitHub</a><li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<span class="avatar avatar_user">
+						<img src="{{info.owner.avatar_url}}" style="width: 80px;">
+						<h4>({{info.name}})</h4>
+					</span>
+					<div class="description">
+						{{info.description}}
+					</div>
+				</div>
+			</div>
+		</div>
+	<hr>
+	<div class="container">
+		<h3>Project Contributors ({{contributors.length}})</h3>
+		<div class="card page-contributors" ng-repeat="contrib in contributors">
+			<img src="{{contrib.avatar_url}}" class="card-img">
+			<div class="card-img-overlay">
+			</div>
+			<span style="font-size: 13px;">
+				{{contrib.login}}
+			</span>
+		</div>
+	</div>
+</div>
