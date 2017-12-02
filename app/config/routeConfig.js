@@ -12,6 +12,6 @@ angular.module("MundiPaggRepos").config(function($routeProvider){
 
 	$routeProvider.when("/contributors/:name",{
 		templateUrl: "view/contributors.html",
-		controller: "contributorsCtrl",
+		controller: "contributorsCtrl"
 	});
 })
