@@ -1,8 +1,5 @@
 # MUNDIPAGG GitHub-Info
 
-This application is based on: 
-
-
 ## Demo
 
 View the app [MUNDIPAGG GitHub-Info](https://wescleymartins1988.github.io/MUNDIPAGG/#!/).
