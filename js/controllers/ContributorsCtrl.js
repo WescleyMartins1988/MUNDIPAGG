@@ -1,18 +1,24 @@
-angular.module("MundiPaggRepos").controller('contributorsCtrl', function($scope, $http, $routeParams, contributorsAPI, respositorioInfoAPI){
-	$scope.contr = 'Project Contributors';
+angular.module("MundiPaggRepos").controller('contributorsCtrl', function($scope, $http, $routeParams){
+	$scope.contr = 'Project Contributor';
 	$scope.contributors = [];
 	$scope.info = [];
 	
 	var params = $routeParams.name
 
 	var carregarContributors = function(){
-			contributorsAPI.getContributors().then(function(response){
+		$http({
+			method: 'GET',
+			url: 'https://api.github.com/repos/mundipagg/'+params+'/contributors'})
+			.then(function(response){
 				$scope.contributors = response.data;
 			})
 	}
 
 	var carregarInfo = function(){
-		respositorioInfoAPI.getRepositorioInfo().then(function(response){
+		$http({
+			method: 'GET',
+			url: 'https://api.github.com/repos/mundipagg/'+params+''})
+			.then(function(response){
 				$scope.info = response.data;
 			})
 	}
